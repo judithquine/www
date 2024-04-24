@@ -19,7 +19,7 @@ function redirect(url){
 }
 
 function abrirVentana(url){
-    window.open(url,"","width=400,heigth=300");
+    window.open(url,"","width=400,height=300");
 }
 
 getBom();

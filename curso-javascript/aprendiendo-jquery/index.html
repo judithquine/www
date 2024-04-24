@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Aprendiendo JQuery</title>
+		<!--
+		https://releases.jquery.com/jquery/
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		-->
+		<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="js/01-selectores.js"></script>
+
+
+
+		<script>
+			$(document).ready(function(){
+				console.log("JQuery cargado...");
+
+			});
+		</script>
+	</head>
+	<body>
+		<h1>JQuery</h1>
+		<p id="rojo" class="zebra">Ejercicios de jQuery</p>
+		<p id="amarillo" class="zebra">Practicando con selectores</p>
+		<p id="verde" class="zebra">Quiero ser un parrafo verde </p>
+		<p class="zebra">Soy un parrafo blanco</p>
+
+	</body>
+
+</html>
+
+<!--
+<script>
+//selecciona el elemento span
+    var spanElement = document.querySelector('.sort-by-dropdown-wrap span');
+
+    //identifica al elemento padre del span
+    var padreElement = spanElement.parentNode;
+
+    console.log(padreElement);
+</script>
+-->
