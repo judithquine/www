@@ -1,15 +1,26 @@
-/*!*191*!*/
-/*!*.lateral{*!*/
-/*!*    height: 250px;*!*/
-/*!*}*!*/
+#menu{
+    height: 50px;
+}
 
-/*!*.lateral > div{*!*/
-/*!*    height: calc(250px / 3);*!*/
-/*!*}*!*/
+#menu ul{
+    text-decoration: none;
+    list-style: none;
+    line-height: 50px ;
+}
 
-/*!*194*!*/
-/*@media (max-width: 768px) {*/
-/*  #menu{*/
-/*    height: auto;*/
-/*  }*/
-/*}*/
+.item{
+    height: 150px;
+}
+
+footer{
+    height: 50px;
+    line-height: 50px;
+}
+
+.lateral{
+    height: 550px;
+}
+
+.lateral > div{
+    height: 50px;
+}
