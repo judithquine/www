@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="es">
 	<head>
-		<meta chartset="utf-8"/>
+		<meta charset="utf-8"/>
 		<title>Imprimir por pantalla - Master PHP</title>
 	</head>
 	<body>
