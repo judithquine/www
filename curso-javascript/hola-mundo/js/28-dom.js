@@ -9,6 +9,7 @@ function cambiaColor(color) {
 	caja.style.background = color;
 }
 
+//==============================================================//
 // Conseguir elementos con un ID concreto
 
 // var caja = document.getElementById('micaja').innerHTML;
@@ -21,6 +22,7 @@ function cambiaColor(color) {
 // 	caja.className = "hola hola2";
 // 	console.log(caja);
 
+//==============================================================//
 // Seleccionar un elemento con querySelector
 	var caja = document.querySelector("#micaja");
 
@@ -31,9 +33,13 @@ function cambiaColor(color) {
 	caja.className = "hola hola2";
 	//console.log(caja);
 
-// Conseguir elementos por su etiqueta
+//==============================================================//
+// Conseguir elementos por su etiqueta - contenido en Texto
 	var todosLosDivs = document.getElementsByTagName('div');
-	//console.log(todosLosDivs);
+	// todosLosDivs[2].textContent;
+	// var contenidoEnTexto = todosLosDivs[2].textContent;
+	// console.log(contenidoEnTexto);
+	// console.log(todosLosDivs);
 
 // cambia contenido desde js
 	// 	var contenidoEnTexto = todosLosDivs[2];
@@ -44,51 +50,55 @@ function cambiaColor(color) {
 	//  console.log(contenidoEnTexto);
 	// contenidoEnTexto.style.background = "red";
 
-// no recomendable, forEach es para array con valores, mejor hacerlo con for
-//todosLosDivs.forEach((valor, indice) => {
+// no recomendable, solo sirve forEach para array con valores, mejor hacerlo con for
+// 	todosLosDivs.forEach((valor, indice) => {
+// 		var parrafo = document.createElement("p");
+// 		var texto = document.createTextNode(valor);
+// 		parrafo.appendChild(texto);
+// 		document.querySelector("#miseccion").appendChild(parrafo);
 //});
-	console.log(todosLosDivs);
+// 	console.log(todosLosDivs);
 
 	var seccion = document.querySelector("#miseccion");
 	var hr = document.createElement("hr");
 
-
  	var valor;
 	for(valor in todosLosDivs) {
-		console.log(todosLosDivs[valor]);
-		if(todosLosDivs[valor].textContent.length >=1){
-		var parrafo = document.createElement("p");
-		var texto = document.createTextNode(todosLosDivs[valor].textContent);
-		parrafo.append(texto);
-		parrafo.append(parrafo);
+		// console.log(valor);
+		// console.log(todosLosDivs[valor]);
+		//compruebo si es un texto
+		if(typeof todosLosDivs[valor].textContent =='string'){
+			var parrafo = document.createElement("p");
+			var texto = document.createTextNode(todosLosDivs[valor].textContent);
+			parrafo.append(texto);
+			// document.querySelector("#miseccion").append(parrafo);
+			seccion.append(parrafo);
 		}
 	}
 	seccion.append(hr);
 
 // Conseguir elementos por su clase css
-// var divsRojos = document.getElementsByClassName("rojo");
-// var divsAmarillos = document.getElementsByClassName("amarillo");
-// divsAmarillos[0].style.background = "yellow";
-//
+	var divsRojos = document.getElementsByClassName('rojo');
+	var divsAmarillos = document.getElementsByClassName('amarillo');
+	// divsRojos[0].style.background = "red";
+	// console.log(divsRojos);
+	// console.log(divsAmarillos[0]);
+	divsAmarillos[0].style.background = "yellow";
 
+	var div;
+	for(div in divsRojos){
+		if(divsRojos[div].className == "rojo"){
+			divsRojos[div].style.background = "red";
+		}
+	}
+	console.log(divsRojos);
 
+// Query selector
+	var id = document.querySelector("#encabezado");
+	console.log(id);
 
-//
-//
-//
-//
-//
-//
-//
-//
+	var claseRojo = document.querySelector("div.rojo");
+	console.log(claseRojo);
 
-
-// // Query selector
-// var id = document.querySelector("#encabezado");
-// console.log(id);
-//
-// var claseRojo = document.querySelector(".rojo");
-// console.log(claseRojo);
-//
-// var etiqueta = document.querySelector("div");
-// console.log(etiqueta);
+	var etiqueta = document.querySelector("div");
+	console.log(etiqueta);
